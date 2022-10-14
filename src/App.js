@@ -5,6 +5,7 @@ import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import Account from './components/Account';
 import app from "./firebase";
+import { AuthContextProvider } from './context/AuthContext';
 
 
 function App() {
@@ -12,11 +13,13 @@ function App() {
   return (
     <div className="App">
       <h1>Hello World</h1>
-      <Routes>
-        <Route path="/" element={<SignIn />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/account" element={<Account />} />
-      </Routes>
+      <AuthContextProvider>
+        <Routes>
+          <Route path="/" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/account" element={<Account />} />
+        </Routes>
+      </AuthContextProvider>
     </div>
   );
 };
