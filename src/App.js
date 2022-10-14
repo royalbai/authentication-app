@@ -1,10 +1,8 @@
-import { Route, Routes } from 'react-router-dom';
-
 import './App.css';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import Account from './components/Account';
-import app from "./firebase";
+import { Route, Routes } from 'react-router-dom';
 import { AuthContextProvider } from './context/AuthContext';
 
 

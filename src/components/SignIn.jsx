@@ -18,8 +18,8 @@ function SignIn() {
                     <label htmlFor="">Enter Password</label>
                     <input type="password" />
                 </div>
+                <button>Sign In</button>
             </form>
-            <button>Sign In</button>
         </div>
     );
 };
