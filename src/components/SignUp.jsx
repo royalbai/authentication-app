@@ -1,8 +1,13 @@
 import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 
 function SignUp() {
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
 
     return (
         <div>
@@ -13,11 +18,11 @@ function SignUp() {
             <form action="">
                 <div>
                     <label htmlFor="">Email Address</label>
-                    <input type="email" />
+                    <input onChange={(e) => setEmail(e.target.value)} type="email" />
                 </div>
                 <div>
                     <label htmlFor="">Enter Password</label>
-                    <input type="password" />
+                    <input onChange={(e) => setPassword(e.target.value)} type="password" />
                 </div>
             </form>
             <button>Sign In</button>
